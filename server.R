@@ -95,14 +95,12 @@ shinyServer(function(input, output,session) {
   })
   
 
-<<<<<<< HEAD
+
   #addResourcePath("library", "/srv/shiny-server")
   addResourcePath("library", "/Users/bapoorva/Desktop/Shiny/rna-web_git")
-=======
-  addResourcePath("library", "/srv/shiny-server")
->>>>>>> 23eaa45bbde387bd21e187de98f7ce2092c3c2fd
+
   output$fastqc = renderUI({
-    tags$iframe(seamless="seamless",src=paste0("library/STARsum/data/www/",input$projects,"_multiqc_report.html"), height=1400, width=1300)
+    tags$iframe(seamless="seamless",src=paste0("library/STARsummary/data/www/",input$projects,"_multiqc_report.html"), height=1400, width=1300)
   })
   ##################################################################################################################
   ##################################################################################################################
