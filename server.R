@@ -32,7 +32,7 @@ shinyServer(function(input, output,session) {
   output$projects = renderUI({
     excel=readexcel()
     prj=excel$projects
-    selectInput("projects","Select a project",as.list(as.character(prj)))
+    selectInput("projects","Select a project",as.list(sort(as.character(prj))))
   })
   
   output$datasetTable<- renderTable({
